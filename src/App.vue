@@ -1,11 +1,33 @@
+import Navbar from './components/Navbar.vue';
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div>
+    <Navbar />
+    <div>
+      <router-view></router-view>
+    </div>
+  </div>
 </template>
 
-<style>
+<script>
+import Navbar from "./components/Navbar";
 
+export default {
+  data: function () {
+    return {
+      app_name: "Vehicle Service",
+    };
+  },
+  components: {
+    Navbar,
+  },
+};
+</script>
+
+<style>
+* {
+  font-family: Helvetica;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 </style>
