@@ -8,13 +8,16 @@
         color=""
       />
     </div>
-    <Fieldset :isInput="true" placeholder="Buscar..." type="text" label="" />
-    <ul>
-      <CardCustomer />
-      <CardCustomer />
-      <CardCustomer />
-      <CardCustomer />
-    </ul>
+    <div class="container-source">
+      <Fieldset :isInput="true" placeholder="Buscar..." type="text" label="" />
+      <h3>Lista de clientes</h3>
+      <ul>
+        <CardCustomer />
+        <CardCustomer />
+        <CardCustomer />
+        <CardCustomer />
+      </ul>
+    </div>
   </div>
   <Modal :showModal="isModalVisible" @close-modal="closeModal">
     <FormCustomer />
@@ -57,11 +60,16 @@ export default {
   margin: 30px auto;
 }
 
-.home ul {
+.container-source{
   margin: 15px 0;
   border: 1px solid #f5f5f5;
   padding: 10px;
   border-radius: 8px;
+}
+
+.container-source h3 {
+  text-align: center;
+  margin-top: 50px;
 }
 
 @media (min-width: 750px) {

@@ -2,8 +2,8 @@
   <li>
     <div id="card">
       <router-link to="/customer">
-        <h4>Nome Sobrenome</h4>
-        <span>Ver</span>
+        <p>Nome Sobrenome</p>
+        <p>12/12/06</p>
       </router-link>
     </div>
   </li>
@@ -24,10 +24,8 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 15px 0;
+  margin: 30px 0;
   border-bottom: 1px solid #f5f5f5;
-  padding: 10px;
-  border-radius: 8px;
 }
 
 #card a {
@@ -35,6 +33,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 15px;
+  padding: 0 10px;
 }
 </style>
