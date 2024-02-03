@@ -1,6 +1,7 @@
 <template>
   <div class="customer">
     <div>
+      <router-link to="/"> Voltar </router-link>
       <h1>Fulano</h1>
       <Button width="50px" text="Editar" color="" />
     </div>

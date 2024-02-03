@@ -9,7 +9,7 @@
     <Fieldset :isInput="true" placeholder="Buscar..." type="text" label="" />
     <ul>
       <router-link to="/customer">
-        <li>Fulano</li>
+        <CardCustomer />
       </router-link>
     </ul>
   </div>
@@ -23,6 +23,7 @@ import RegisterCustomer from "../../src/components/RegisterCustomer.vue";
 import Fieldset from "@/components/Fieldset.vue";
 import Button from "@/components/Button.vue";
 import Modal from "@/components/Modal.vue";
+import CardCustomer from "@/components/CardCustomer.vue";
 
 export default {
   components: {
@@ -30,6 +31,7 @@ export default {
     RegisterCustomer,
     Fieldset,
     Modal,
+    CardCustomer,
   },
   data() {
     return {
