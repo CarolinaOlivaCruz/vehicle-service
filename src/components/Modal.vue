@@ -25,11 +25,10 @@ export default {
   align-items: center;
   z-index: 5;
   overflow-y: auto;
-  padding-top: 450px;
 }
 
 .modal-content {
-  margin: 40px 0;
+  height: 90%;
   background: #ffff;
   padding: 20px;
   width: 90%;
@@ -40,7 +39,7 @@ export default {
 }
 
 .modal-content::-webkit-scrollbar {
-  width: 10px;
+  width: 0;
 }
 
 .modal-content::-webkit-scrollbar-thumb {
