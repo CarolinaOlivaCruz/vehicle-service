@@ -1,6 +1,6 @@
 <template>
   <header id="header">
-    <h2>VEHICLE SERVICE</h2>
+    <router-link to="/"> VEHICLE SERVICE </router-link>
   </header>
 </template>
 
@@ -25,7 +25,4 @@ export default {
   font-weight: bold;
 }
 
-#header a:hover {
-  color: #fff;
-}
 </style>
