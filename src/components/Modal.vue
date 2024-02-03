@@ -1,7 +1,7 @@
 <template>
   <div v-if="showModal" id="container-modal">
     <div class="modal-content">
-      <Button width="20px" @click.prevent="closeModal" text="X" color="#ffff" />
+      <Button width="20px" @click.prevent="closeModal" text="Voltar" color="#ffff" />
       <slot></slot>
     </div>
   </div>
@@ -53,6 +53,9 @@ export default {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .modal-content::-webkit-scrollbar {
