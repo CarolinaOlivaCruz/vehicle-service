@@ -1,5 +1,9 @@
 <template>
-  <button id="button" :style="{ width: width }" @click="handleClick">
+  <button
+    id="button"
+    :style="{ width: width, background: color, border: color }"
+    @click="handleClick"
+  >
     {{ text }}
   </button>
 </template>
@@ -23,6 +27,10 @@ export default {
     text: {
       type: String,
       default: "Clique aqui",
+    },
+    color: {
+      type: String,
+      default: "",
     },
     methods: {
       handleClick() {

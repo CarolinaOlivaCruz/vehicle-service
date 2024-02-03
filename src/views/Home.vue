@@ -5,6 +5,7 @@
       clickType=""
       :onclick="handleClick"
       text="Cadastrar novo cliente"
+      color=""
     />
     <Fieldset :isInput="true" placeholder="Buscar..." type="text" label="" />
     <ul>
