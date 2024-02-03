@@ -65,14 +65,15 @@
         type="date"
         label="Data da última revisão"
       />
-      <Fieldset
-        :isInput="false"
-        placeholder=""
-        type="checkbox"
-        label="Serviço a ser realizado"
-        :options="selectedServices"
-        :multiple="true"
-      />
+      <fieldset>
+        <legend>Serviços a serem realizados</legend>
+        <div v-for="(service, index) in listServices" :key="index">
+          <label>
+            <input type="checkbox" />
+            {{ service.label }}
+          </label>
+        </div>
+      </fieldset>
     </div>
     <div id="container-button">
       <Button
@@ -105,11 +106,12 @@ export default {
   },
   data() {
     return {
-      selectedServices: [
+      listServices: [
         { value: "Troca de Óleo", label: "Troca de Óleo", concluded: false },
         { value: "Troca de Pneu", label: "Troca de Pneu", concluded: false },
       ],
       selectGender: [
+        { value: "", label: "Selecione" },
         { value: "Masculino", label: "Masculino" },
         { value: "Feminino", label: "Feminino" },
         { value: "Prefiro não dizer", label: "Prefiro não dizer" },
@@ -120,9 +122,8 @@ export default {
     handleSaveClick() {
       console.log("Form saved!");
 
-      console.log(this.selectedServices);
+      console.log(this.listServices);
     },
-    
   },
 };
 </script>
