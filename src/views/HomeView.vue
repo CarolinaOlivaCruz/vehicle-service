@@ -11,19 +11,23 @@
       <li>Fulano</li>
     </ul>
   </div>
-  <RegisterCustomer v-if="showRegisterCustomer" />
+  <Modal v-if="showRegisterCustomer">
+    <RegisterCustomer />
+  </Modal>
 </template>
 
 <script>
 import RegisterCustomer from "../../src/components/RegisterCustomer.vue";
 import Fieldset from "@/components/Fieldset.vue";
 import Button from "@/components/Button.vue";
+import Modal from "@/components/Modal.vue";
 
 export default {
   components: {
     Button,
     RegisterCustomer,
     Fieldset,
+    Modal,
   },
   data() {
     return {
