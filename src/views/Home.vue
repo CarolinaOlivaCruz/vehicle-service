@@ -8,18 +8,19 @@
     />
     <Fieldset :isInput="true" placeholder="Buscar..." type="text" label="" />
     <ul>
-      <router-link to="/customer">
-        <CardCustomer />
-      </router-link>
+      <CardCustomer />
+      <CardCustomer />
+      <CardCustomer />
+      <CardCustomer />
     </ul>
   </div>
   <Modal :showModal="isModalVisible" @close-modal="closeModal">
-    <RegisterCustomer />
+    <FormCustomer />
   </Modal>
 </template>
 
 <script>
-import RegisterCustomer from "../../src/components/RegisterCustomer.vue";
+import FormCustomer from "../../src/components/FormCustomer.vue";
 import Fieldset from "@/components/Fieldset.vue";
 import Button from "@/components/Button.vue";
 import Modal from "@/components/Modal.vue";
@@ -28,7 +29,7 @@ import CardCustomer from "@/components/CardCustomer.vue";
 export default {
   components: {
     Button,
-    RegisterCustomer,
+    FormCustomer,
     Fieldset,
     Modal,
     CardCustomer,
