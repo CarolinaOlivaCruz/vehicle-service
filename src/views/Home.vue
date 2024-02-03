@@ -1,11 +1,13 @@
 <template>
   <div class="home">
-    <Button
-      width="100%"
-      @click.prevent="handleClick"
-      text="Cadastrar novo cliente"
-      color=""
-    />
+    <div class="container-button">
+      <Button
+        width="100%"
+        @click.prevent="handleClick"
+        text="Cadastrar novo cliente"
+        color=""
+      />
+    </div>
     <Fieldset :isInput="true" placeholder="Buscar..." type="text" label="" />
     <ul>
       <CardCustomer />
@@ -51,10 +53,21 @@ export default {
 </script>
 
 <style>
-#home {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.container-button {
+  margin: 30px auto;
+}
+
+.home ul {
+  margin: 15px 0;
+  border: 1px solid #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+@media (min-width: 750px) {
+  .container-button {
+    max-width: 200px;
+    margin: 30px auto;
+  }
 }
 </style>
