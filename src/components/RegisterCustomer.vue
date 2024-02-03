@@ -65,7 +65,7 @@
         type="date"
         label="Data da última revisão"
       />
-      <fieldset>
+      <fieldset class="container-checkbox">
         <legend>Serviços a serem realizados</legend>
         <div v-for="(service, index) in listServices" :key="index">
           <label>
@@ -109,6 +109,17 @@ export default {
       listServices: [
         { value: "Troca de Óleo", label: "Troca de Óleo", concluded: false },
         { value: "Troca de Pneu", label: "Troca de Pneu", concluded: false },
+        { value: "Pintura", label: "Pintura", concluded: false },
+        {
+          value: "Instalação de alarme",
+          label: "Instalação de alarme",
+          concluded: false,
+        },
+        {
+          value: "Instalação de som",
+          label: "Instalação de som",
+          concluded: false,
+        },
       ],
       selectGender: [
         { value: "", label: "Selecione" },
@@ -140,5 +151,17 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+
+.container-checkbox {
+  width: 100%;
+  margin: 15px 0;
+  border: 1px solid #f5f5f5;
+  padding: 10px 5px;
+  border-radius: 8px;
+}
+
+.container-checkbox legend {
+  padding: 0 5px;
 }
 </style>
