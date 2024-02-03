@@ -58,7 +58,6 @@
       type="date"
       label="Data da última revisão"
     />
-
     <Button width="100%" clickType="" :onclick="handleClick" text="Salvar" />
   </form>
 </template>

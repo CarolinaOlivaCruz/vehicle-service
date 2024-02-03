@@ -8,7 +8,9 @@
     />
     <Fieldset :isInput="true" placeholder="Buscar..." type="text" label="" />
     <ul>
-      <li>Fulano</li>
+      <router-link to="/customer">
+        <li>Fulano</li>
+      </router-link>
     </ul>
   </div>
   <Modal v-if="showRegisterCustomer">
