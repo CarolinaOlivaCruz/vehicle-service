@@ -3,7 +3,6 @@
     <div id="card">
       <router-link to="/customer">
         <h4>Nome Sobrenome</h4>
-        <span>nº de veículos</span>
         <span>Ver</span>
       </router-link>
     </div>
@@ -36,5 +35,6 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 15px;
 }
 </style>

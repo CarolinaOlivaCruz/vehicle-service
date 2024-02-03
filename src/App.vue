@@ -62,4 +62,10 @@ ul {
   margin: 0 auto;
   margin-top: 15px;
 }
+
+@media (min-width: 750px) {
+  #main {
+    max-width: 750px;
+  }
+}
 </style>

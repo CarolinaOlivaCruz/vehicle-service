@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import FormCustomer from "../../src/components/FormCustomer.vue";
+import FormCustomer from "@/components/FormCustomer.vue";
 import Fieldset from "@/components/Fieldset.vue";
 import Button from "@/components/Button.vue";
 import Modal from "@/components/Modal.vue";
