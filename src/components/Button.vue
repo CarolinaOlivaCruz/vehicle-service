@@ -41,7 +41,7 @@ export default {
 #button {
   padding: 10px 0;
   border: 1px solid #f5f5f5;
-  border-radius: 16px;
+  border-radius: 8px;
   background: #f5f5f5;
   margin: 0 auto;
 }
