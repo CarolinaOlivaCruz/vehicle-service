@@ -1,21 +1,21 @@
 <template>
-  <div id="nav">
+  <header id="header">
     <router-link to="/">logo</router-link>
-    <div>
+    <nav>
       <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
-    </div>
-  </div>
+    </nav>
+  </header>
 </template>
 
 <script>
 export default {
-  name: "Navbar",
+  name: "Header",
 };
 </script>
 
 <style>
-#nav {
+#header {
   margin: 0 auto;
   background-color: #ffff;
   border-bottom: 1px solid #f5f5f5;
@@ -25,14 +25,14 @@ export default {
   align-items: center;
 }
 
-#nav a {
+#header a {
   color: #000;
   text-decoration: none;
   margin: 12px;
   transition: 0.5s;
 }
 
-#nav a:hover {
+#header a:hover {
   color: #fff;
 }
 </style>
