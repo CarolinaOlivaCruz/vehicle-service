@@ -1,18 +1,35 @@
 <template>
-  <div id="container-modal">
+  <div v-if="showModal" id="container-modal">
     <div class="modal-content">
-        <slot></slot>
+      <Button width="20px" @click.prevent="closeModal" text="X" color="#ffff" />
+      <slot></slot>
     </div>
   </div>
 </template>
 
 <script>
+import Button from "./Button.vue";
+
 export default {
   name: "Modal",
+  components: {
+    Button,
+  },
+  props: {
+    showModal: {
+      type: Boolean,
+      default: "true",
+    },
+  },
+  methods: {
+    closeModal() {
+      this.$emit("close-modal");
+    },
+  },
 };
 </script>
 
-<style> 
+<style>
 #container-modal {
   width: 100vw;
   height: 100vh;
@@ -49,5 +66,4 @@ export default {
 .modal-content::-webkit-scrollbar-track {
   background-color: #f1f1f1;
 }
-
 </style>

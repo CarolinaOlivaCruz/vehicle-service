@@ -13,7 +13,7 @@
       </router-link>
     </ul>
   </div>
-  <Modal v-if="showRegisterCustomer">
+  <Modal :showModal="isModalVisible" @close-modal="closeModal">
     <RegisterCustomer />
   </Modal>
 </template>
@@ -33,12 +33,15 @@ export default {
   },
   data() {
     return {
-      showRegisterCustomer: false,
+      isModalVisible: false,
     };
   },
   methods: {
     handleClick() {
-      this.showRegisterCustomer = true;
+      this.isModalVisible = true;
+    },
+    closeModal() {
+      this.isModalVisible = false;
     },
   },
 };
