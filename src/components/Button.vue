@@ -2,7 +2,6 @@
   <button
     id="button"
     :style="{ width: width, background: color, border: color }"
-    @click="handleClick"
   >
     {{ text }}
   </button>
@@ -16,14 +15,7 @@ export default {
       type: String,
       default: "auto",
     },
-    clickType: {
-      type: String,
-      default: "default",
-    },
-    onClick: {
-      type: Function,
-      default: () => {},
-    },
+
     text: {
       type: String,
       default: "Clique aqui",
@@ -31,15 +23,6 @@ export default {
     color: {
       type: String,
       default: "",
-    },
-    methods: {
-      handleClick() {
-        if (this.clickType === "handleClick") {
-          this.onClick();
-        } else {
-          this.onClick();
-        }
-      },
     },
   },
 };

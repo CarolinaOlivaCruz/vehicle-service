@@ -38,7 +38,11 @@
       type="number"
       label="CPF"
     />
-    <div id="container-form-vehicle">
+    <div
+      v-for="(vehicle, index) in vehicles"
+      :key="index"
+      id="container-form-vehicle"
+    >
       <Fieldset
         :isInput="true"
         placeholder="Tipo do veículo"
@@ -69,24 +73,28 @@
         <legend>Serviços a serem realizados</legend>
         <div v-for="(service, index) in listServices" :key="index">
           <label>
-            <input type="checkbox" />
+            <input type="checkbox" v-model="vehicle.services[serviceIndex]" />
             {{ service.label }}
           </label>
         </div>
       </fieldset>
+      <Button
+        width="100%"
+        @click.prevent="removeVehicle"
+        text="Remover veículo"
+        color=""
+      />
     </div>
     <div id="container-button">
       <Button
         width="100%"
-        clickType=""
-        :onclick="handleClick"
-        text="Adicionar outro veículo"
+        @click.prevent="addVehicle"
+        text="Adicionar veículo"
         color=""
       />
       <Button
         width="100%"
-        clickType=""
-        :onclick="handleSaveClick"
+        @click="handleSaveClick"
         text="Salvar"
         color="#a7a3a3"
       />
@@ -107,18 +115,16 @@ export default {
   data() {
     return {
       listServices: [
-        { value: "Troca de Óleo", label: "Troca de Óleo", concluded: false },
-        { value: "Troca de Pneu", label: "Troca de Pneu", concluded: false },
-        { value: "Pintura", label: "Pintura", concluded: false },
+        { value: "Troca de Óleo", label: "Troca de Óleo" },
+        { value: "Troca de Pneu", label: "Troca de Pneu" },
+        { value: "Pintura", label: "Pintura" },
         {
           value: "Instalação de alarme",
           label: "Instalação de alarme",
-          concluded: false,
         },
         {
           value: "Instalação de som",
           label: "Instalação de som",
-          concluded: false,
         },
       ],
       selectGender: [
@@ -127,6 +133,8 @@ export default {
         { value: "Feminino", label: "Feminino" },
         { value: "Prefiro não dizer", label: "Prefiro não dizer" },
       ],
+      showVehicleFields: false,
+      vehicles: [],
     };
   },
   methods: {
@@ -134,6 +142,20 @@ export default {
       console.log("Form saved!");
 
       console.log(this.listServices);
+    },
+    addVehicle() {
+      this.vehicles.push({
+        type: "",
+        plate: "",
+
+        services: this.listServices.map((service) => ({
+          ...service,
+          concluded: false,
+        })),
+      });
+    },
+    removeVehicle() {
+      this.vehicles.pop();
     },
   },
 };
