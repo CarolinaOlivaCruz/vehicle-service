@@ -4,35 +4,35 @@
       width="100%"
       clickType=""
       :onclick="handleClick"
-      text="Registrar novo proprietário"
+      text="Cadastrar novo cliente"
     />
     <Fieldset :isInput="true" placeholder="Buscar..." type="text" label="" />
     <ul>
       <li>Fulano</li>
     </ul>
   </div>
-  <RegisterOwner v-if="showRegisterOwner" />
+  <RegisterCustomer v-if="showRegisterCustomer" />
 </template>
 
 <script>
-import RegisterOwner from "../../src/components/RegisterOwner.vue";
+import RegisterCustomer from "../../src/components/RegisterCustomer.vue";
 import Fieldset from "@/components/Fieldset.vue";
 import Button from "@/components/Button.vue";
 
 export default {
   components: {
     Button,
-    RegisterOwner,
+    RegisterCustomer,
     Fieldset,
   },
   data() {
     return {
-      showRegisterOwner: false,
+      showRegisterCustomer: false,
     };
   },
   methods: {
     handleClick() {
-      this.showRegisterOwner = true;
+      this.showRegisterCustomer = true;
     },
   },
 };

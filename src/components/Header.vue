@@ -1,10 +1,6 @@
 <template>
   <header id="header">
-    <router-link to="/">logo</router-link>
-    <nav>
-      <router-link to="/">Home</router-link>
-      <router-link to="/about">About</router-link>
-    </nav>
+    <h2>VEHICLE SERVICE</h2>
   </header>
 </template>
 
@@ -16,20 +12,17 @@ export default {
 
 <style>
 #header {
-  margin: 0 auto;
+  text-align: center;
   background-color: #ffff;
   border-bottom: 1px solid #f5f5f5;
-  padding: 15px 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  padding: 30px 0;
 }
 
 #header a {
   color: #000;
   text-decoration: none;
-  margin: 12px;
   transition: 0.5s;
+  font-weight: bold;
 }
 
 #header a:hover {

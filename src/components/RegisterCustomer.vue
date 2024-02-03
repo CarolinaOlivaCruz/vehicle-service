@@ -41,7 +41,7 @@ import Fieldset from "./Fieldset.vue";
 import Button from "./Button.vue";
 
 export default {
-  name: "RegisterOwner",
+  name: "RegisterCustomer",
   components: {
     Fieldset,
     Button,
