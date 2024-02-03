@@ -2,13 +2,7 @@
   <div class="customer">
     <div>
       <h1>Fulano</h1>
-      <Button
-        width="50px"
-        clickType=""
-        :onclick="handleClick"
-        text="Editar"
-        color=""
-      />
+      <Button width="50px" text="Editar" color="" />
     </div>
     <div>
       <article>

@@ -15,7 +15,6 @@ export default {
       type: String,
       default: "auto",
     },
-
     text: {
       type: String,
       default: "Clique aqui",

@@ -2,8 +2,7 @@
   <div class="home">
     <Button
       width="100%"
-      clickType=""
-      :onclick="handleClick"
+      @click.prevent="handleClick"
       text="Cadastrar novo cliente"
       color=""
     />
